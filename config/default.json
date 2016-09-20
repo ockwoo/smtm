@@ -1,0 +1,5 @@
+{
+    "mongoose" : {
+        "SMTM_RESTAURANT_DB_URL" : "mongodb://localhost:27017/smtm/restaurants"
+    }
+}
