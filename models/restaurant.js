@@ -6,8 +6,7 @@ console.log('connecting db : ' + config.mongoose.SMTM_RESTAURANT_DB_URL);
 var db = mongoose.createConnection(config.mongoose.SMTM_RESTAURANT_DB_URL);
 
 var restaurantSchema = new Schema({
-    name : String,
-    mainMenu : [String],
+    name : String,   
     address : String,
     gps : {
         latitude : Number,
@@ -15,10 +14,14 @@ var restaurantSchema = new Schema({
     },
     menu : [{
         id : Schema.Types.ObjectId,
+        url : [String],
         nm_ko : String,
         nm_en : String,
-        price : String
+        nm_cn : String,
+        price : String,
+        ingredient : [String]
     }],
+    menupan : [String],
     created_at : Date,
 	updated_at : Date,
 	creator : String,
